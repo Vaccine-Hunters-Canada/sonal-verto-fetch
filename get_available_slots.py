@@ -64,10 +64,10 @@ def get_open_slots():
                 current_slots = parsed_data[data]['open_slots'][slot]
                 if (current_slots > 0):
                     diff_since_last_run_slot = current_slots - last_run_json[data]['open_slots'][slot]
-                    print("{} : {} ({})".format(slot, current_slots, diff_since_last_run_slot))
+                    print("{} : {} ({:+})".format(slot, current_slots, diff_since_last_run_slot))
 
             print("Total open slots for {} : {}".format(parsed_data[data]['name'], total_open_slots))
-            print("Change since last fetch for {} : {}".format(parsed_data[data]['name'], total_diff_since_last_run))
+            print("Change since last fetch for {} : {:+}".format(parsed_data[data]['name'], total_diff_since_last_run))
             print("")
 
     with open(output_json_file, 'w') as output_json:
