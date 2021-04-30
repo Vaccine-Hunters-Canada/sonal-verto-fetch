@@ -36,10 +36,11 @@ def get_open_slots():
             open_slots = 0
             for slot in data[clinic]['availabilities'][group]:
                 open_slots = data[clinic]['availabilities'][group][slot]
-                if slot in clinic_open_slots:
-                    clinic_open_slots[slot] = clinic_open_slots[slot] + open_slots
+                trimmed_datetime = slot.split("T")[0]
+                if trimmed_datetime in clinic_open_slots:
+                    clinic_open_slots[trimmed_datetime] = clinic_open_slots[trimmed_datetime] + open_slots
                 else:
-                    clinic_open_slots[slot] = open_slots
+                    clinic_open_slots[trimmed_datetime] = open_slots
                 total_open_slots += open_slots
         clinic_data["open_slots"] = clinic_open_slots
         clinic_data["total_open_slots"] = total_open_slots
@@ -51,9 +52,19 @@ def get_open_slots():
         if (data != 'date'):
             total_open_slots = parsed_data[data]['total_open_slots']
             last_run_total_open_slots = last_run_json[data]['total_open_slots']
+            total_diff_since_last_run = total_open_slots - last_run_json[data]['total_open_slots']
             parsed_data[data]['difference_since_lastrun'] = total_open_slots - last_run_total_open_slots
+            print("")
+            print("Clinic: " + parsed_data[data]['name'])
+            print("------------------------------")
+            for slot in parsed_data[data]['open_slots']:
+                current_slots = parsed_data[data]['open_slots'][slot]
+                diff_since_last_run_slot = last_run_json[data]['open_slots'][slot]
+                print(slot + " : " + str(current_slots) + " (" + str(diff_since_last_run_slot) + ")")
             print("Total open slots for " + parsed_data[data]['name'] + " : " + str(total_open_slots))
-            print("Difference since last query for " + parsed_data[data]['name'] + " : " + str(total_open_slots - total_open_slots))
+            print("Difference since last query for " + parsed_data[data]['name'] + " : " + str(total_diff_since_last_run))
+            print("")
+            
 
     with open(output_json_file, 'w') as output_json:
         json.dump(parsed_data, output_json)
