@@ -1,114 +1,116 @@
 ----------------------------------------
 
-2021-30-04T18:12:41 : Checking for new open slots
+2021-30-04T19:20:39 : Checking for new open slots
 
 Clinic: Regent Park 40 Oaks
 ------------------------------
-2021-04-30 : 0 (0)
-2021-05-01 : 0 (0)
-2021-05-02 : 0 (0)
-2021-05-03 : 0 (0)
-2021-05-04 : 0 (0)
-2021-05-05 : 1 (0)
-2021-05-06 : 0 (0)
-2021-05-07 : 0 (0)
-2021-05-08 : 0 (0)
-2021-05-09 : 0 (0)
+2021-05-05 : 1 (+0)
 Total open slots for Regent Park 40 Oaks : 1
-Difference since last query for Regent Park 40 Oaks : 0
+Change since last fetch for Regent Park 40 Oaks : +0
 
 
 Clinic: St. James Town Wellesley Community Centre (WCC)
 ------------------------------
-2021-04-30 : 0 (0)
-2021-05-01 : 0 (0)
-2021-05-02 : 0 (0)
-2021-05-03 : 1 (0)
-2021-05-04 : 0 (0)
-2021-05-05 : 1 (0)
-2021-05-06 : 0 (0)
-2021-05-07 : 0 (0)
-2021-05-08 : 0 (0)
-2021-05-09 : 0 (0)
-Total open slots for St. James Town Wellesley Community Centre (WCC) : 2
-Difference since last query for St. James Town Wellesley Community Centre (WCC) : 0
+Total open slots for St. James Town Wellesley Community Centre (WCC) : 0
+Change since last fetch for St. James Town Wellesley Community Centre (WCC) : -1
 
 
 Clinic: Ryerson University
 ------------------------------
-2021-04-30 : 0 (0)
-2021-05-01 : 0 (0)
-2021-05-02 : 0 (0)
-2021-05-03 : 0 (0)
-2021-05-04 : 0 (0)
-2021-05-05 : 0 (0)
-2021-05-06 : 0 (0)
-2021-05-07 : 0 (0)
-2021-05-08 : 0 (0)
-2021-05-09 : 0 (0)
 Total open slots for Ryerson University : 0
-Difference since last query for Ryerson University : 0
+Change since last fetch for Ryerson University : +0
 
 
 Clinic: St. Michael’s Hospital
 ------------------------------
-2021-04-30 : 0 (0)
-2021-05-01 : 0 (0)
-2021-05-02 : 0 (0)
-2021-05-03 : 2 (0)
-2021-05-04 : 7 (0)
-2021-05-05 : 9 (0)
-2021-05-06 : 9 (0)
-2021-05-07 : 8 (1)
-2021-05-08 : 8 (0)
-2021-05-09 : 0 (0)
-Total open slots for St. Michael’s Hospital : 43
-Difference since last query for St. Michael’s Hospital : 1
+2021-05-03 : 2 (+0)
+2021-05-04 : 7 (+0)
+2021-05-05 : 9 (+0)
+2021-05-06 : 8 (+0)
+2021-05-07 : 7 (-1)
+2021-05-08 : 6 (+0)
+Total open slots for St. Michael’s Hospital : 39
+Change since last fetch for St. Michael’s Hospital : -1
 
 
 Clinic: St. Joseph’s Health Centre
 ------------------------------
-2021-04-30 : 0 (0)
-2021-05-01 : 0 (0)
-2021-05-02 : 0 (0)
-2021-05-03 : 6 (0)
-2021-05-04 : 8 (0)
-2021-05-05 : 9 (0)
-2021-05-06 : 6 (0)
-2021-05-07 : 8 (0)
-2021-05-08 : 8 (0)
-2021-05-09 : 0 (0)
-Total open slots for St. Joseph’s Health Centre : 45
-Difference since last query for St. Joseph’s Health Centre : 0
+2021-05-03 : 7 (+1)
+2021-05-04 : 8 (+0)
+2021-05-05 : 9 (+0)
+2021-05-06 : 6 (+0)
+2021-05-07 : 8 (+0)
+2021-05-08 : 8 (+0)
+Total open slots for St. Joseph’s Health Centre : 46
+Change since last fetch for St. Joseph’s Health Centre : +1
 
 
 Clinic: West Park Healthcare Centre
 ------------------------------
-2021-04-30 : 0 (0)
-2021-05-01 : 0 (0)
-2021-05-02 : 0 (0)
-2021-05-03 : 0 (0)
-2021-05-04 : 0 (0)
-2021-05-05 : 0 (0)
-2021-05-06 : 0 (0)
-2021-05-07 : 0 (0)
-2021-05-08 : 0 (0)
-2021-05-09 : 0 (0)
 Total open slots for West Park Healthcare Centre : 0
-Difference since last query for West Park Healthcare Centre : 0
+Change since last fetch for West Park Healthcare Centre : +0
 
 
 Clinic: Community Hub Place
 ------------------------------
-2021-04-30 : 0 (0)
-2021-05-01 : 0 (0)
-2021-05-02 : 0 (0)
-2021-05-03 : 0 (0)
-2021-05-04 : 0 (0)
-2021-05-05 : 0 (0)
-2021-05-06 : 0 (0)
-2021-05-07 : 0 (0)
-2021-05-08 : 0 (0)
-2021-05-09 : 0 (0)
 Total open slots for Community Hub Place : 0
-Difference since last query for Community Hub Place : 0
+Change since last fetch for Community Hub Place : +0
+
+
+----------------------------------------
+
+2021-30-04T19:23:40 : Checking for new open slots
+
+Clinic: Regent Park 40 Oaks
+------------------------------
+2021-05-05 : 1 (+0)
+Total open slots for Regent Park 40 Oaks : 1
+Change since last fetch for Regent Park 40 Oaks : +0
+
+
+Clinic: St. James Town Wellesley Community Centre (WCC)
+------------------------------
+Total open slots for St. James Town Wellesley Community Centre (WCC) : 0
+Change since last fetch for St. James Town Wellesley Community Centre (WCC) : +0
+
+
+Clinic: Ryerson University
+------------------------------
+Total open slots for Ryerson University : 0
+Change since last fetch for Ryerson University : +0
+
+
+Clinic: St. Michael’s Hospital
+------------------------------
+2021-05-03 : 2 (+0)
+2021-05-04 : 7 (+0)
+2021-05-05 : 9 (+0)
+2021-05-06 : 8 (+0)
+2021-05-07 : 7 (+0)
+2021-05-08 : 6 (+0)
+Total open slots for St. Michael’s Hospital : 39
+Change since last fetch for St. Michael’s Hospital : +0
+
+
+Clinic: St. Joseph’s Health Centre
+------------------------------
+2021-05-03 : 6 (-1)
+2021-05-04 : 8 (+0)
+2021-05-05 : 9 (+0)
+2021-05-06 : 6 (+0)
+2021-05-07 : 8 (+0)
+2021-05-08 : 8 (+0)
+Total open slots for St. Joseph’s Health Centre : 45
+Change since last fetch for St. Joseph’s Health Centre : -1
+
+
+Clinic: West Park Healthcare Centre
+------------------------------
+Total open slots for West Park Healthcare Centre : 0
+Change since last fetch for West Park Healthcare Centre : +0
+
+
+Clinic: Community Hub Place
+------------------------------
+Total open slots for Community Hub Place : 0
+Change since last fetch for Community Hub Place : -1
