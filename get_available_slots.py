@@ -54,7 +54,7 @@ def get_open_slots():
             total_open_slots = parsed_data[data]['total_open_slots']
             last_run_total_open_slots = last_run_json[data]['total_open_slots']
             total_diff_since_last_run = total_open_slots - last_run_json[data]['total_open_slots']
-            parsed_data[data]['difference_since_lastrun'] = total_open_slots - last_run_total_open_slots
+            parsed_data[data]['change_since_last_fetch'] = total_open_slots - last_run_total_open_slots
 
             print("")
             print("Clinic: {}".format(parsed_data[data]['name']))
@@ -67,7 +67,7 @@ def get_open_slots():
                     print("{} : {} ({})".format(slot, current_slots, diff_since_last_run_slot))
 
             print("Total open slots for {} : {}".format(parsed_data[data]['name'], total_open_slots))
-            print("Difference since last query for {} : {}".format(parsed_data[data]['name'], total_diff_since_last_run))
+            print("Change since last fetch for {} : {}".format(parsed_data[data]['name'], total_diff_since_last_run))
             print("")
 
     with open(output_json_file, 'w') as output_json:

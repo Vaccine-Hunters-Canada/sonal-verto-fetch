@@ -1,5 +1,5 @@
 {
-    "date": "2021-30-04T18:46:43",
+    "date": "2021-30-04T19:05:18",
     "RPV": {
         "name": "Regent Park 40 Oaks",
         "open_slots": {
@@ -15,7 +15,7 @@
             "2021-05-09": 0
         },
         "total_open_slots": 1,
-        "difference_since_lastrun": 0
+        "change_since_last_fetch": 0
     },
     "WCC": {
         "name": "St. James Town Wellesley Community Centre (WCC)",
@@ -26,13 +26,13 @@
             "2021-05-03": 0,
             "2021-05-04": 0,
             "2021-05-05": 1,
-            "2021-05-06": 1,
+            "2021-05-06": 0,
             "2021-05-07": 0,
             "2021-05-08": 0,
             "2021-05-09": 0
         },
-        "total_open_slots": 2,
-        "difference_since_lastrun": 0
+        "total_open_slots": 1,
+        "change_since_last_fetch": -1
     },
     "RUV": {
         "name": "Ryerson University",
@@ -49,7 +49,7 @@
             "2021-05-09": 0
         },
         "total_open_slots": 0,
-        "difference_since_lastrun": 0
+        "change_since_last_fetch": 0
     },
     "SMV": {
         "name": "St. Michael\u2019s Hospital",
@@ -61,12 +61,12 @@
             "2021-05-04": 7,
             "2021-05-05": 9,
             "2021-05-06": 8,
-            "2021-05-07": 7,
+            "2021-05-07": 8,
             "2021-05-08": 6,
             "2021-05-09": 0
         },
-        "total_open_slots": 39,
-        "difference_since_lastrun": 0
+        "total_open_slots": 40,
+        "change_since_last_fetch": 1
     },
     "SJV": {
         "name": "St. Joseph\u2019s Health Centre",
@@ -83,7 +83,7 @@
             "2021-05-09": 0
         },
         "total_open_slots": 45,
-        "difference_since_lastrun": 0
+        "change_since_last_fetch": 0
     },
     "WPA": {
         "name": "West Park Healthcare Centre",
@@ -100,7 +100,7 @@
             "2021-05-09": 0
         },
         "total_open_slots": 0,
-        "difference_since_lastrun": 0
+        "change_since_last_fetch": 0
     },
     "CPH": {
         "name": "Community Hub Place",
@@ -117,6 +117,6 @@
             "2021-05-09": 0
         },
         "total_open_slots": 0,
-        "difference_since_lastrun": 0
+        "change_since_last_fetch": 0
     }
 }
