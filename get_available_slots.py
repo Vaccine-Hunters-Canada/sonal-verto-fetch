@@ -1,4 +1,3 @@
-import copy
 from datetime import datetime
 import json
 import requests
@@ -59,12 +58,11 @@ def get_open_slots():
             print("------------------------------")
             for slot in parsed_data[data]['open_slots']:
                 current_slots = parsed_data[data]['open_slots'][slot]
-                diff_since_last_run_slot = last_run_json[data]['open_slots'][slot]
+                diff_since_last_run_slot = current_slots - last_run_json[data]['open_slots'][slot]
                 print(slot + " : " + str(current_slots) + " (" + str(diff_since_last_run_slot) + ")")
             print("Total open slots for " + parsed_data[data]['name'] + " : " + str(total_open_slots))
             print("Difference since last query for " + parsed_data[data]['name'] + " : " + str(total_diff_since_last_run))
             print("")
-            
 
     with open(output_json_file, 'w') as output_json:
         json.dump(parsed_data, output_json)
