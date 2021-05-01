@@ -1,20 +1,23 @@
+import atexit
 from datetime import datetime
 import json
+import os
 import requests
 import schedule
 import time
 
 #api-endpoint
 VACCINETO_API_SLOTS="https://vaccineto.ca/api/slots"
-LAST_RUN_JSON = 'last-run.json'
 
 def get_open_slots():
+    global DATA_DIR
     global LAST_RUN_JSON
+
     print("")
     print("----------------------------------------")
     print("")
     print(datetime.now().strftime("%Y-%d-%mT%H:%M:%S") + " : Checking for new open slots")
-    with open(LAST_RUN_JSON) as last_run_json_file:
+    with open(os.path.join(DATA_DIR, LAST_RUN_JSON)) as last_run_json_file:
         last_run_json = json.load(last_run_json_file)
 
     response = requests.get(url = VACCINETO_API_SLOTS)
@@ -70,14 +73,26 @@ def get_open_slots():
             print("Change since last fetch for {} : {:+}".format(parsed_data[data]['name'], total_diff_since_last_run))
             print("")
 
-    with open(output_json_file, 'w') as output_json:
-        json.dump(parsed_data, output_json)
+    with open(os.path.join(DATA_DIR, output_json_file), 'w') as output_json:
+        json.dump(parsed_data, output_json, indent=4)
     LAST_RUN_JSON = output_json_file
+
+def on_exit_handler():
+    os.rename(os.path.join(DATA_DIR, LAST_RUN_JSON), os.path.join(DATA_DIR, 'last-run.json'))
     
+if __name__ == '__main__':
+    global DATA_DIR
+    global LAST_RUN_JSON
+    LAST_RUN_JSON = 'last-run.json'
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATA_DIR = ROOT_DIR + '/data/'
 
-get_open_slots()
-schedule.every(3).minutes.do(get_open_slots)
 
-while 1:
-    schedule.run_pending()
-    time.sleep(1)
+    atexit.register(on_exit_handler)
+    get_open_slots()
+    schedule.every(3).minutes.do(get_open_slots)
+
+    while 1:
+        schedule.run_pending()
+        time.sleep(1)
+
