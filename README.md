@@ -22,9 +22,9 @@ python get_available_slots.py
 
 # Output
 
-You see an example output of the script to stdout in the file [`example_output.txt`](example_output.txt)
+You can see an example output of the script to stdout in the file [`example_output.txt`](example_output.txt)
 
-Example output of the fetched data is in json format with the timestamp as the filename, there is an example [`last-run.json`](last-run.json).
+Example output of the fetched data is in json format with the timestamp as the filename, there is an example [`last-run.json`](data/last-run.json).
 As the script runs continuously it will be generating these json files, in future we can just rotate the fetched data into `last-run.json` file but for now it will be creating these json files for each fetch.
 
-To stop the script just exit using a keyboard interrup `Ctrl + c` the script will overwrite the `data/last-run.json`
+To stop the script just exit using a keyboard interrupt `Ctrl + c` the script will overwrite the `data/last-run.json`
