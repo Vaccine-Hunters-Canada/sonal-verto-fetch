@@ -27,4 +27,4 @@ You see an example output of the script to stdout in the file [`example_output.t
 Example output of the fetched data is in json format with the timestamp as the filename, there is an example [`last-run.json`](last-run.json).
 As the script runs continuously it will be generating these json files, in future we can just rotate the fetched data into `last-run.json` file but for now it will be creating these json files for each fetch.
 
-If you want to continue on from last time you left off just rename the latest run json file to `last-run.json` and run the script again.
+To stop the script just exit using a keyboard interrup `Ctrl + c` the script will overwrite the `data/last-run.json`
