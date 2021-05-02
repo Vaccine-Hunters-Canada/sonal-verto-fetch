@@ -53,8 +53,6 @@ def get_open_slots():
     date_time_obj = datetime.now()
     output_json_file = date_time_obj.strftime("%Y-%d-%m_%H-%M-%S") + '.json'
 
-    with open(os.path.join(DATA_DIR, output_json_file), 'w') as output_json:
-        json.dump(parsed_data, output_json, indent=4)
 
     for data in parsed_data:
         if (data != 'date'):
@@ -83,6 +81,8 @@ def get_open_slots():
             print("Change since last fetch for {} : {:+}".format(parsed_data[data]['name'], total_diff_since_last_run))
             print("")
 
+    with open(os.path.join(DATA_DIR, output_json_file), 'w') as output_json:
+        json.dump(parsed_data, output_json, indent=4)
     LAST_RUN_JSON = output_json_file
 
 def on_exit_handler():
