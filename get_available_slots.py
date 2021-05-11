@@ -55,8 +55,12 @@ def get_open_slots():
 
     for clinic in parsed_data["data"]:
         total_open_slots = parsed_data["data"][clinic]["total_open_slots"]
-        last_run_total_open_slots = last_run_json["data"][clinic]["total_open_slots"]
-        total_diff_since_last_run = total_open_slots - last_run_json["data"][clinic]["total_open_slots"] 
+        if clinic in last_run_json["data"]:
+            last_run_total_open_slots = last_run_json["data"][clinic]["total_open_slots"]
+            total_diff_since_last_run = total_open_slots - last_run_json["data"][clinic]["total_open_slots"] 
+        else:
+            last_run_total_open_slots = total_open_slots
+            total_diff_since_last_run = total_open_slots
         parsed_data["data"][clinic]["change_since_last_fetch"] = total_open_slots - last_run_total_open_slots
 
         print("")
@@ -70,7 +74,10 @@ def get_open_slots():
                 available_slots = parsed_data["data"][clinic]["open_slots"][group][date]
                 if (available_slots > 0):
                     are_slots_available = True
-                    diff_since_last_run_slot = available_slots - last_run_json["data"][clinic]["open_slots"][group][date]
+                    if (clinic in last_run_json["data"]) and (date in last_run_json["data"][clinic]["open_slots"][group]):
+                        diff_since_last_run_slot = available_slots - last_run_json["data"][clinic]["open_slots"][group][date]
+                    else:
+                        diff_since_last_run_slot = available_slots
                     group_summary_msg += "{} : {} ({:+})\n".format(date, available_slots, diff_since_last_run_slot)
             if are_slots_available:
                 print(group_summary_msg)
