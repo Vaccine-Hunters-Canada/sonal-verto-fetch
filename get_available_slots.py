@@ -74,7 +74,7 @@ def get_open_slots():
                 available_slots = parsed_data["data"][clinic]["open_slots"][group][date]
                 if (available_slots > 0):
                     are_slots_available = True
-                    if (clinic in last_run_json["data"]) and (date in last_run_json["data"][clinic]["open_slots"][group]):
+                    if (clinic in last_run_json["data"]) and (group in last_run_json["data"][clinic]["open_slots"]) and (date in last_run_json["data"][clinic]["open_slots"][group]):
                         diff_since_last_run_slot = available_slots - last_run_json["data"][clinic]["open_slots"][group][date]
                     else:
                         diff_since_last_run_slot = available_slots
